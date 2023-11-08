@@ -1,0 +1,22 @@
+<template>
+  <lightning-card title="Loop And Iterator">
+    <div class="slds-p-around_x-small">
+      <h3 class="slds-m-bottom_x-small">Loop example</h3>
+      <template for:each={cityList} for:item="city">
+        <p key={city} class="slds-m-bottom_x-small">
+          <lightning-icon icon-name="utility:checkin"></lightning-icon> {city}
+        </p>
+      </template>
+      <hr />
+
+      <h3 class="slds-m-bottom_x-small">Iterator example</h3>
+
+      <template iterator:it={cityList}>
+        <p key={it.value} class="slds-m-bottom_x-small">
+          <lightning-icon icon-name="utility:checkin"></lightning-icon>
+          {it.value}
+        </p>
+      </template>
+    </div>
+  </lightning-card>
+</template>
