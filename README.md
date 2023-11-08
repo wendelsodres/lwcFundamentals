@@ -13,6 +13,7 @@ Learning Apex and LWC
 - Install plugin
 
 ```
+npm install -g node-gyp *
 sfdx plugins:install @salesforce/lwc-dev-server
 ```
 
