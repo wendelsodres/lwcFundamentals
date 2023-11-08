@@ -1,0 +1,38 @@
+<template>
+  <lightning-card title="LWC Binding">
+    <div class="slds-p-around_x-small">
+      <p><strong>Binding text:</strong> {msgBinding}</p>
+
+      <lightning-input
+        label="Type it"
+        onchange={msgChangeHandler}
+      ></lightning-input>
+    </div>
+  </lightning-card>
+
+  <lightning-card title="Conditional Rendering">
+    <div class="slds-p-around_x-small">
+      <lightning-input
+        type="checkbox"
+        onchange={showDivHandler}
+        label="Show Box"
+      ></lightning-input>
+
+      <template if:true={showDiv}>
+        <div class="showBox__div slds-p-top_small">
+          <p>
+            <lightning-formatted-text
+              value="Hello World"
+            ></lightning-formatted-text>
+          </p>
+
+          <p>
+            <lightning-formatted-text
+              value=" you displayed this !!!!"
+            ></lightning-formatted-text>
+          </p>
+        </div>
+      </template>
+    </div>
+  </lightning-card>
+</template>
