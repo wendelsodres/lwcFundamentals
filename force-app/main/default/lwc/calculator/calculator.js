@@ -1,9 +1,9 @@
 import { LightningElement, track } from "lwc";
 
 export default class Calculator extends LightningElement {
-  @track currentResult;
+  currentResult;
   @track previousResult = [];
-  @track showPreviousResult = false;
+  showPreviousResult = false;
 
   firstNumber;
   secondNumber;
@@ -25,23 +25,23 @@ export default class Calculator extends LightningElement {
     const secondN = parseInt(this.secondNumber);
 
     if (operator === "+") {
-      this.currentResult = `Result of ${firstN} + ${secondN} is ${
+      this.currentResult = `Result of ${firstN} ${operator} ${secondN} is ${
         firstN + secondN
       }`;
 
       this.previousResult.push(this.currentResult);
     } else if (operator === "-") {
-      this.currentResult = `Result of ${firstN} + ${secondN} is ${
+      this.currentResult = `Result of ${firstN} ${operator} ${secondN} is ${
         firstN - secondN
       }`;
       this.previousResult.push(this.currentResult);
     } else if (operator === "*") {
-      this.currentResult = `Result of ${firstN} + ${secondN} is ${
+      this.currentResult = `Result of ${firstN} ${operator} ${secondN} is ${
         firstN * secondN
       }`;
       this.previousResult.push(this.currentResult);
     } else if (operator === "/") {
-      this.currentResult = `Result of ${firstN} + ${secondN} is ${
+      this.currentResult = `Result of ${firstN} ${operator} ${secondN} is ${
         firstN / secondN
       }`;
       this.previousResult.push(this.currentResult);
