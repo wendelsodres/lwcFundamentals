@@ -55,6 +55,32 @@
           value={currentResult}
         ></lightning-formatted-text>
       </lightning-layout-item>
+
+      <lightning-layout-item size="12" padding="around-medium">
+        <lightning-input
+          type="checkbox"
+          label="Show Previous results"
+          onchange={togglePreviousResult}
+        ></lightning-input>
+      </lightning-layout-item>
+
+      <lightning-layout-item
+        size="12"
+        padding="around-medium"
+        if:true={showPreviousResult}
+      >
+        <ul>
+          <template iterator:it={previousResult}>
+            <li key={it.value}>
+              <div if:true={it.first} class="slds-border_top"></div>
+              <lightning-formatted-text
+                value={it.value}
+              ></lightning-formatted-text>
+              <div if:true={it.last} class="slds-border_bottom"></div>
+            </li>
+          </template>
+        </ul>
+      </lightning-layout-item>
     </lightning-layout>
   </lightning-card>
 </template>
