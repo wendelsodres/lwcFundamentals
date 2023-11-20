@@ -1,12 +1,14 @@
 <template>
-  <div class="slds-p-around_medium lgc-bg">
-    <lightning-tile
-      label={meetingRoomsInfo.roomName}
-      href="/path/to/my-open-cases"
-    >
-      <p class="slds-truncate">
-        {meetingRoomsInfo.roomName} - {meetingRoomsInfo.roomCapacity}
-      </p>
-    </lightning-tile>
-  </div>
+  <template if:true={showRoomInfo}>
+    <div class="slds-p-around_medium lgc-bg">
+      <lightning-tile
+        label={meetingRoomsInfo.roomName}
+        href="/path/to/my-open-cases"
+      >
+        <p class="slds-truncate">
+          {meetingRoomsInfo.roomName} - {meetingRoomsInfo.roomCapacity}
+        </p>
+      </lightning-tile>
+    </div>
+  </template>
 </template>
