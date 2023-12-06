@@ -1,12 +1,12 @@
 <template>
-  <template if:false={showRoomInfo}>
-    <div class="slds-p-around_medium lgc-bg">
+  <template if:true={showRoomInfo}>
+    <div class="slds-p-around_medium lgc-bg" onclick={tileClickHandler}>
       <lightning-tile
-        label={meetingRoomsInfo.roomName}
-        href="/path/to/my-open-cases"
+        label={meetingRoomInfo.roomName}
+        href="/path/to/somewhere"
       >
-        <p class="slds-truncate">
-          {meetingRoomsInfo.roomName} - {meetingRoomsInfo.roomCapacity}
+        <p class="slds-truncate" title={meetingRoomInfo.roomCapacity}>
+          Room Capacity: {meetingRoomInfo.roomCapacity}
         </p>
       </lightning-tile>
     </div>
