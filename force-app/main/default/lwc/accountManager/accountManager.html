@@ -29,6 +29,25 @@
         </lightning-card>
       </lightning-layout-item>
       <lightning-layout-item size="6" padding="around-small">
+        <lightning-card title="Vie Account Record">
+          <p>
+            <lightning-formatted-text
+              value={retAccountName}
+            ></lightning-formatted-text>
+          </p>
+
+          <p>
+            <lightning-formatted-phone
+              value={retAccountPhone}
+            ></lightning-formatted-phone>
+          </p>
+
+          <p>
+            <lightning-formatted-url
+              value={retAccountUrl}
+            ></lightning-formatted-url>
+          </p>
+        </lightning-card>
       </lightning-layout-item>
     </lightning-layout>
   </lightning-card>
