@@ -12,11 +12,6 @@ public with sharing class AccountTriggerHandler {
 
         lstAccounts.add(sc);
       }
-
-      if (!lstAccounts.isEmpty() && RecursiveHandler.isNotRecursive) {
-        RecursiveHandler.isNotRecursive = false;
-        insert lstAccounts;
-      }
     } catch (Exception e) {
       System.debug(e.getMessage());
     }

@@ -1,6 +1,10 @@
 <template>
   <lightning-card title="Quiz App In LWC">
     <div class="slds-m-around_medium">
+      <template if:true={isSubmitted}>
+        <div>You have Scored {correctAnswers} out of {myQuestions.length}</div>
+      </template>
+
       <form>
         <template for:each={myQuestions} for:item="quiz">
           <div key={quiz.id}>
